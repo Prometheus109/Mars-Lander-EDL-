@@ -43,9 +43,8 @@ def get_net_acceleration(px, py, vx, vy, current_mass, thrust, density, current_
     
     return ax, ay
 
-# =================================================================
 # 3. MISSION SIMULATION
-# =================================================================
+
 def run_suicide_burn_mission():
     px, py = 0.0, MARS_RADIUS + 120000.0
     v_start, entry_angle = 3600.0, math.radians(-8)
@@ -53,7 +52,9 @@ def run_suicide_burn_mission():
     
     dt, time = 0.1, 0.0
     current_fuel = START_MASS - DRY_MASS
-    history = {k: [] for k in ['dist', 'alt', 'v', 'q', 'g', 'theta', 'r', 'mass', 'engine']}
+    history = {
+    'dist': [], 'alt': [], 'v': [], 'q': [], 
+    'g': [], 'theta': [], 'r': [], 'mass': [], 'engine': []}
 
     while True:
         r_mag = math.sqrt(px**2 + py**2)
@@ -96,9 +97,8 @@ def run_suicide_burn_mission():
         
     return history
 
-# =================================================================
 # 4. DASHBOARD
-# =================================================================
+
 data = run_suicide_burn_mission()
 fig = plt.figure(figsize=(16, 10), facecolor='#fdfdfd')
 
@@ -187,4 +187,5 @@ def update(frame):
     return line_objects + points + [line_pol, point_pol, hud]
 
 ani = FuncAnimation(fig, update, frames=len(data['dist']) // 20, blit=True, interval=40, repeat=False)
+
 plt.show()
