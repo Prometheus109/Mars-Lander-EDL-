@@ -7,6 +7,7 @@ I wanted to see if I could recreate the "7 Minutes of Terror" using Python. This
 
 The program doesn't just treat the lander like a point in space. It accounts for the way the air gets thicker as you drop, and it handles the high-stakes moment where the heat shield gets kicked away to make room for the landing rockets. I spent a lot of time tweaking the "Suicide Burn" logic to make sure the engine fires at just the right altitude to kill our velocity before we hit the dirt.
 
+
 Engineering Assumptions & Design Basis
 
 I based the vehicle specs on "Discovery-class" landers (like Phoenix or InSight), which are designed for direct-descent powered landings rather than the complex SkyCrane used by the larger rovers.
@@ -20,6 +21,7 @@ I based the vehicle specs on "Discovery-class" landers (like Phoenix or InSight)
     Surface Density (0.02 kg/m³): I purposely set the atmospheric density slightly higher than the "average" Martian day. I wanted to simulate a "thick" atmosphere day (like during a dust storm) to see how the drag profile handles higher structural loads.
 
     The "Suicide Burn" Trigger: I set the engine ignition to 2,500m. In a real mission, this is usually triggered by a radar altimeter once the lander has slowed down enough for the heat shield to be safely jettisoned without the air ripping the internal components apart.
+
     
 What I modeled
 
@@ -39,4 +41,4 @@ Dependencies:
     
     
 
-    Feel free to reach out if you have ideas on how to make the more accurate!
+Feel free to reach out if you have ideas on how to make the more accurate!
