@@ -27,7 +27,7 @@ What I modeled
 
     Atmospheric Entry: I used an exponential decay model for the air density. Even though Mars has a thin atmosphere, hitting it at 3,600 m/s still generates a massive amount of drag.
 
-    Jettison Sequence: At 2,500 meters, the ship changes. It loses the 150kg heat shield, which changes its weight and its aerodynamics instantly.
+    Jettison Sequence: At 2,200 meters, the ship changes. It loses the 150kg heat shield, which changes its weight and its aerodynamics instantly.
 
     Powered Landing: The lander uses a 8,000N retro-rocket. The mass of the ship actually goes down as the fuel burns away, which makes the physics a little more complicated but much more realistic.
 
