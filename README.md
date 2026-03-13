@@ -3,10 +3,7 @@ Physics-based Mars lander simulation. Models atmospheric drag, variable vehicle 
 
 About this project
 
-    I wanted to see if I could recreate the "7 Minutes of Terror" using Python. This simulation follows a lander from the moment it hits the Martian atmosphere until it (hopefully) touches down safely.
-
-    The program doesn't just treat the lander like a point in space. It accounts for the way the air gets thicker as you drop, and it handles the high-stakes moment where the heat shield gets kicked away to make room for the landing rockets. I spent a lot of time tweaking the "Suicide Burn" logic to make sure the     engine fires at just the right altitude to kill our velocity before we hit the dirt.
-
+I wanted to see if I could recreate the "7 Minutes of Terror" using Python. This simulation follows a lander from the moment it hits the Martian atmosphere until it (hopefully) touches down safely.
 
 Engineering Assumptions & Design Basis
 
