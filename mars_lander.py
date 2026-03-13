@@ -18,7 +18,7 @@ DRAG_COEFF = 1.7
 SHIELD_AREA = 9.6        # Surface area for shield
 LANDER_AREA = 2.0        # Small area after shield is ejected
 
-BURN_START_ALTITUDE = 2500.0 
+BURN_START_ALTITUDE = 2200.0 
 
 # 2. PHYSICS FUNCTIONS
 
@@ -186,6 +186,6 @@ def update(frame):
     
     return line_objects + points + [line_pol, point_pol, hud]
 
-ani = FuncAnimation(fig, update, frames=len(data['dist']) // 20, blit=True, interval=40, repeat=False)
+ani = FuncAnimation(fig, update, frames=len(data['dist']) // 20, blit=True, interval=40, repeat=True)
 
 plt.show()
